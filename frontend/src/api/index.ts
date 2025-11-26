@@ -62,9 +62,9 @@ export async function generateOutline(
   return response.data
 }
 
-// 生成图片 (SSE) - 已废弃，请使用 generateImagesPost()
-// 废弃原因：GET 请求在复杂参数场景下可靠性差，POST 流式传输更稳定
-// 建议：所有新代码使用 generateImagesPost() 方法
+// 生成图片 (SSE) - 当前未使用，保留供作者评估
+// 注意：经代码扫描发现，实际项目中使用的是 generateImagesPost() 方法
+// 建议：请作者评估是否有必要删除此方法以减少代码噪声，或保留作为备选方案
 /*
 export function generateImages(
   pages: Page[],
