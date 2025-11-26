@@ -172,6 +172,15 @@ export const useGeneratorStore = defineStore('generator', {
       }
     },
 
+    // 更新单个图片（用于结果页重绘，不影响进度统计）
+    updateImage(index: number, url: string) {
+      const image = this.images.find(img => img.index === index)
+      if (image) {
+        image.url = url
+        image.status = 'done'
+      }
+    },
+
     // 完成生成
     finishGeneration(taskId: string) {
       this.taskId = taskId
